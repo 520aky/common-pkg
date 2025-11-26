@@ -1,7 +1,7 @@
 package appMiddleware
 
 import (
-	"github.com/doubunv/common-pkg/result"
+	"github.com/520aky/common-pkg/result"
 	"net/http"
 )
 

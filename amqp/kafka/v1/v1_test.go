@@ -3,8 +3,8 @@ package v1
 import (
 	"context"
 	"fmt"
-	"github.com/doubunv/common-pkg/amqp/kafka/config"
-	"github.com/doubunv/common-pkg/headInfo"
+	"github.com/520aky/common-pkg/amqp/kafka/config"
+	"github.com/520aky/common-pkg/headInfo"
 	"math/rand"
 	"testing"
 )

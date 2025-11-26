@@ -31,7 +31,7 @@ const (
 	UserToken                 = 2
 )
 
-var jwtSecret = []byte("kdd452-934sg4-l4d4q6")
+//var jwtSecret = []byte("kdd452-934sg4-l4d4q6")
 
 type Claims struct {
 	Uid          int64  `json:"uid"`
@@ -43,7 +43,7 @@ type Claims struct {
 	jwt.StandardClaims
 }
 
-func GenerateToken(uid int64, source string, sign string, businessCode string, roleId int64, tokenType int) (accessToken string, err error) {
+func GenerateToken(uid int64, source string, sign string, businessCode string, roleId int64, tokenType int, jwtSecret string) (accessToken string, err error) {
 	nowTime := time.Now()
 	expireTime := nowTime.Add(AccessTokenExpireDuration)
 	claims := Claims{
@@ -67,7 +67,7 @@ func GenerateToken(uid int64, source string, sign string, businessCode string, r
 	return accessToken, err
 }
 
-func ParseToken(token string) (*Claims, error) {
+func ParseToken(token, jwtSecret string) (*Claims, error) {
 	tokenClaims, err := jwt.ParseWithClaims(token, &Claims{}, func(token *jwt.Token) (interface{}, error) {
 		return jwtSecret, nil
 	})
@@ -79,8 +79,8 @@ func ParseToken(token string) (*Claims, error) {
 	return nil, errors.Wrap(err, "failed to parse token")
 }
 
-func ParseRefreshToken(aToken string) (claims *Claims, err error) {
-	accessClaim, err := ParseToken(aToken)
+func ParseRefreshToken(aToken, jwtSecret string) (claims *Claims, err error) {
+	accessClaim, err := ParseToken(aToken, jwtSecret)
 	if err != nil {
 		return claims, errors.WithMessage(err, "failed to parse accessToken")
 	}

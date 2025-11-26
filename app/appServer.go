@@ -1,8 +1,8 @@
 package app
 
 import (
-	"github.com/doubunv/common-pkg/dbM"
-	"github.com/doubunv/common-pkg/logs"
+	"github.com/520aky/common-pkg/dbM"
+	"github.com/520aky/common-pkg/logs"
 	"github.com/sirupsen/logrus"
 	"github.com/zeromicro/go-zero/core/logx"
 )

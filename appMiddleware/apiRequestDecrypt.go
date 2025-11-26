@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"github.com/doubunv/common-pkg/aesGCM"
-	"github.com/doubunv/common-pkg/consts"
-	"github.com/doubunv/common-pkg/result"
+	"github.com/520aky/common-pkg/aesGCM"
+	"github.com/520aky/common-pkg/consts"
+	"github.com/520aky/common-pkg/result"
 	"io"
 	"net/http"
 )

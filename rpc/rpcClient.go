@@ -2,8 +2,7 @@ package rpc
 
 import (
 	"fmt"
-	"github.com/doubunv/common-pkg/rpc/interceptors"
-
+	"github.com/520aky/common-pkg/rpc/interceptors"
 	"github.com/zeromicro/go-zero/zrpc"
 )
 
@@ -14,12 +13,13 @@ func GenRpcTarget(hosts string) string {
 type Config struct {
 	Host    string
 	RpcName string
+	Timeout int64
 }
 
 func MustNewClient(conf Config) zrpc.Client {
 	return zrpc.MustNewClient(
 		zrpc.RpcClientConf{
-			Timeout: 10000, //10s
+			Timeout: conf.Timeout, //10s
 			Target:  GenRpcTarget(conf.Host),
 		},
 		zrpc.WithUnaryClientInterceptor(interceptors.ClientInterceptor(conf.RpcName)),
@@ -30,7 +30,7 @@ func MustNewClient(conf Config) zrpc.Client {
 func NewClient(conf Config) (zrpc.Client, error) {
 	return zrpc.NewClient(
 		zrpc.RpcClientConf{
-			Timeout: 10000, //10s
+			Timeout: conf.Timeout, //10s
 			Target:  GenRpcTarget(conf.Host),
 		},
 		zrpc.WithUnaryClientInterceptor(interceptors.ClientInterceptor(conf.RpcName)),

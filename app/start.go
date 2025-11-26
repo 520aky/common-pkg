@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/doubunv/common-pkg/appMiddleware"
+	"github.com/520aky/common-pkg/appMiddleware"
 	"github.com/zeromicro/go-zero/rest"
 )
 

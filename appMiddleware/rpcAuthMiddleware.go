@@ -3,8 +3,8 @@ package appMiddleware
 import (
 	"context"
 	"errors"
-	"github.com/doubunv/common-pkg/headInfo"
-	"github.com/doubunv/common-pkg/result/xcode"
+	"github.com/520aky/common-pkg/headInfo"
+	"github.com/520aky/common-pkg/result/xcode"
 	"github.com/zeromicro/go-zero/core/logx"
 	"google.golang.org/grpc/metadata"
 	"net/http"

@@ -2,8 +2,8 @@ package headInfo
 
 import (
 	"context"
-	"github.com/doubunv/common-pkg/consts"
-	"github.com/doubunv/common-pkg/ctxMd"
+	"github.com/520aky/common-pkg/consts"
+	"github.com/520aky/common-pkg/ctxMd"
 	"go.opentelemetry.io/otel/trace"
 	"google.golang.org/grpc/metadata"
 	"strconv"

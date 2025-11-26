@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/doubunv/common-pkg/xxlJob"
+	"github.com/520aky/common-pkg/xxlJob"
 	"github.com/xxl-job/xxl-job-executor-go"
 	"log"
 

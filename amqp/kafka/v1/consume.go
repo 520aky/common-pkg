@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"github.com/doubunv/common-pkg/amqp/kafka/config"
+	"github.com/520aky/common-pkg/amqp/kafka/config"
 	"github.com/segmentio/kafka-go"
 	"github.com/zeromicro/go-zero/core/logc"
 	"runtime/debug"

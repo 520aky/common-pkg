@@ -1,10 +1,10 @@
 package appMiddleware
 
 import (
-	"github.com/doubunv/common-pkg/consts"
-	"github.com/doubunv/common-pkg/ctxMd"
-	"github.com/doubunv/common-pkg/headInfo"
-	"github.com/doubunv/common-pkg/result/xcode"
+	"github.com/520aky/common-pkg/consts"
+	"github.com/520aky/common-pkg/ctxMd"
+	"github.com/520aky/common-pkg/headInfo"
+	"github.com/520aky/common-pkg/result/xcode"
 	"google.golang.org/grpc/metadata"
 	"net/http"
 	"strconv"

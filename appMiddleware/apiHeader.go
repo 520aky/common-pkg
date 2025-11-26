@@ -3,8 +3,8 @@ package appMiddleware
 import (
 	"bytes"
 	"errors"
-	"github.com/doubunv/common-pkg/headInfo"
-	"github.com/doubunv/common-pkg/result"
+	"github.com/520aky/common-pkg/headInfo"
+	"github.com/520aky/common-pkg/result"
 	"github.com/zeromicro/go-zero/core/logc"
 	"io"
 	"net/http"
