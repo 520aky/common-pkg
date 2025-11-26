@@ -1,4 +1,4 @@
-module github.com/doubunv/common-pkg
+module github.com/520aky/common-pkg
 
 go 1.22.0
 
