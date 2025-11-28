@@ -1,8 +1,7 @@
-package rpc
+package rpcclient
 
 import (
 	"fmt"
-	"github.com/520aky/common-pkg/rpc/interceptors"
 	"github.com/zeromicro/go-zero/zrpc"
 )
 
@@ -22,8 +21,8 @@ func MustNewClient(conf Config) zrpc.Client {
 			Timeout: conf.Timeout, //10s
 			Target:  GenRpcTarget(conf.Host),
 		},
-		zrpc.WithUnaryClientInterceptor(interceptors.ClientInterceptor(conf.RpcName)),
-		zrpc.WithDialOption(interceptors.RetryDialOption()),
+		zrpc.WithUnaryClientInterceptor(ClientInterceptor(conf.RpcName)),
+		zrpc.WithDialOption(RetryDialOption()),
 	)
 }
 
@@ -33,7 +32,7 @@ func NewClient(conf Config) (zrpc.Client, error) {
 			Timeout: conf.Timeout, //10s
 			Target:  GenRpcTarget(conf.Host),
 		},
-		zrpc.WithUnaryClientInterceptor(interceptors.ClientInterceptor(conf.RpcName)),
-		zrpc.WithDialOption(interceptors.RetryDialOption()),
+		zrpc.WithUnaryClientInterceptor(ClientInterceptor(conf.RpcName)),
+		zrpc.WithDialOption(RetryDialOption()),
 	)
 }

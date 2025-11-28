@@ -1,4 +1,4 @@
-package xcode
+package result
 
 import (
 	"errors"
