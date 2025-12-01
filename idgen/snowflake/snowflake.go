@@ -38,6 +38,13 @@ func New(workerID int64) (*Generator, error) {
 	return &Generator{workerID: workerID}, nil
 }
 
+func MustNew(workerID int64) *Generator {
+	if workerID < 0 || workerID > maxWorkerID {
+		panic(fmt.Errorf("workerID out of range: %d (0..%d)", workerID, maxWorkerID))
+	}
+	return &Generator{workerID: workerID}
+}
+
 // NewFromEnv 支持从环境变量读取：SNOWFLAKE_WORKER_ID
 func NewFromEnv() *Generator {
 	if s := os.Getenv("SNOWFLAKE_WORKER_ID"); s != "" {
