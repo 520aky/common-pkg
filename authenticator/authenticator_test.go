@@ -26,7 +26,7 @@ func TestBuildOtpAuthUrl(t *testing.T) {
 
 func TestVerifyTOTP(t *testing.T) {
 	secret := "CFVIZUL3VLZHAI66CCJPJILH6655JSWV"
-	totp, err := VerifyTOTP(secret, "162067", 30, 6, 1)
+	totp, err := VerifyTOTP(secret, "735805")
 	if err != nil {
 		t.Errorf("Error verifying TOTP: %s", err)
 		return

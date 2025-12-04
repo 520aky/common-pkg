@@ -44,16 +44,21 @@ func BuildOtpAuthUrl(secret, issuer, account string) string {
 //	window: 时间偏移容差（比如 1=前后各 1 个 time-step）
 //
 // 返回：true=验证通过
-func VerifyTOTP(secretBase32, code string, period, digits, window int) (bool, error) {
-	if period <= 0 {
+func VerifyTOTP(secretBase32, code string) (bool, error) {
+	var (
 		period = 30
-	}
-	if digits <= 0 {
 		digits = 6
-	}
-	if window < 0 {
-		window = 0
-	}
+		window = 10
+	)
+	//if period <= 0 {
+	//	period = 30
+	//}
+	//if digits <= 0 {
+	//	digits = 6
+	//}
+	//if window < 0 {
+	//	window = 0
+	//}
 
 	// 规范化 secret（去掉空格，大写）
 	secretBase32 = strings.ToUpper(strings.ReplaceAll(secretBase32, " ", ""))
