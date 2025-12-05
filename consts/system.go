@@ -1,19 +1,19 @@
 package consts
 
 const (
-	HeaderToken     = "authorization_jwt"
+	HeaderToken     = "authorization-jwt"
 	Trace           = "trace"
-	ClientIp        = "client_ip"
-	UserAgent       = "user_agent"
-	TokenUid        = "token_uid"
-	TokenUidRole    = "token_uid_role"
+	ClientIp        = "client-ip"
+	UserAgent       = "user-agent"
+	TokenUid        = "token-uid"
+	TokenUidRole    = "token-uid-role"
 	Version         = "version"
 	Source          = "source"
-	ReqPath         = "req_path"
+	ReqPath         = "req-path"
 	Business        = "business"
-	BusinessCode    = "business_code"
-	ContentLanguage = "content_language"
-	OriginUrl       = "origin_url"
+	BusinessCode    = "business-code"
+	ContentLanguage = "content-language"
+	OriginUrl       = "origin-url"
 	Timezone        = "timezone"
 )
 
