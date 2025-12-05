@@ -16,18 +16,18 @@ import (
 const PLATFORM_BUSINESS_CODE = "99999999"
 
 type Head struct {
-	AuthorizationJwt string `json:"authorization_jwt"` // 用户token
+	AuthorizationJwt string `json:"authorization-jwt"` // 用户token
 	Version          string `json:"version"`           // APP版本
 	Source           string `json:"source"`            // 来源渠道	* Android * Ios * Pc
-	ClientIp         string `json:"client_ip"`         // 客户端IP
+	ClientIp         string `json:"client-ip"`         // 客户端IP
 	Trace            string `json:"trace"`             // 链路路由
-	TokenUid         string `json:"token_uid"`         // 用户ID
-	ReqPath          string `json:"req_path"`          // 请求path
+	TokenUid         string `json:"token-uid"`         // 用户ID
+	ReqPath          string `json:"req-path"`          // 请求path
 	Business         string `json:"business"`
-	BusinessCode     string `json:"business_code"`
-	ContentLanguage  string `json:"content_language"`
-	TokenUidRole     string `json:"token_uid_role"`
-	ReqOrigin        string `json:"req_origin"` // 请求地址
+	BusinessCode     string `json:"business-code"`
+	ContentLanguage  string `json:"content-language"`
+	TokenUidRole     string `json:"token-uid-role"`
+	ReqOrigin        string `json:"req-origin"` // 请求地址
 	Timezone         string `json:"timezone"`
 }
 
